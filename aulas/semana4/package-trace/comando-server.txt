@@ -1,0 +1,17 @@
+ena {sai do modo usuário e acessa o modo privilegiado)
+conf t {sai do modo privilegiado e acessa o modo  de configuração terminal}
+hostname Matriz {insere um nome no router}
+enable password cisco {insere uma senha de acesso do modo privilegiado)
+line vty 0 4 {habilita o protocolo de acesso remoto Telnet)
+password cisco {senha de telnet}
+login {solicita a senha de telnet}
+int g0/0 {acessa a interface gigabit ethernet 0/0 - default gateway}
+ip address 172.16.0.1 255.255.0.0 {insere ip na interface}
+no shut {levanta a interface}
+int s0/3/0 {acessaa a interface}
+ip address 200.200.200.1 255.255.255.0 {insere ip na iterface}
+clock rate 64000 {define a cadência da comunicação}
+no shut {levanta a interface}
+router rip {configuração do protocolo de roteamento rip}
+network 172.16.0.0 {declaração das redes conectadas no roteador}
+network 200.200.200.0 {declaração das redes conectadas no roteador}

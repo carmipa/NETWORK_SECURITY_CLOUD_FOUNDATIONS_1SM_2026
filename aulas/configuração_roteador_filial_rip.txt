@@ -1,0 +1,21 @@
+ena
+conf t
+hostname Filial
+enable password cisco
+line vty 0 4
+password cisco
+login
+int g0/0
+ip address 192.168.100.1 255.255.255.0
+no shut
+int s0/3/1
+ip address 200.200.200.2 255.255.255.0
+no shut
+router rip
+network 192.168.100.0
+network 200.200.200.0
+
+
+
+
+
