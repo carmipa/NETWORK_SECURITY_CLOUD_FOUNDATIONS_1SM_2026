@@ -1,0 +1,20 @@
+ena 
+conf t
+hostname Matriz
+enable password cisco
+int g0/0
+ip address 192.168.100.1 255.255.255.0
+no shut
+
+
+filial
+
+rede: 172.16.0.0
+mascara: 255.255.0.0
+primeiro ip: 172.16.0.1
+ultimo ip: 172.16.255.254
+broadcast: 172.16.255.255
+gateway 172.16.0.1 / 255.255.0.0
+
+dhcp: 172.16.0.2 / 255.255.0.0
+start ip: 172.16.0.3
